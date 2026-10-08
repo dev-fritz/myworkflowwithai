@@ -43,6 +43,9 @@ menores executando o trabalho simples e tudo passando por revisão.
 
 ```
 .
+├── agents-md/
+│   ├── go/AGENTS.md       # padrões para projetos Go
+│   └── react-ts/AGENTS.md # padrões para projetos React + TypeScript
 ├── agents/
 │   ├── commit-pr.md       # commits atômicos + push + PR
 │   ├── pr-reviewer.md     # revisão criteriosa de PRs (somente leitura)
@@ -104,6 +107,23 @@ Transforma uma task em entrega dentro de um projeto existente.
   e não faz merge sem pedido explícito; todo achado é verificado no código real.
 - **`task-executor`**: só altera os arquivos listados na tarefa; não commita, não
   instala dependências não pedidas e não toma decisões de design.
+
+## AGENTS.md por stack
+
+Modelos de `AGENTS.md` com os padrões que os agentes devem seguir em qualquer projeto
+da stack: tecnologias obrigatórias e proibidas, arquitetura, segurança, testes e
+checklists de entrega.
+
+| Arquivo | Stack | Destaques |
+|---------|-------|-----------|
+| `agents-md/go/AGENTS.md` | Go | Chi, PostgreSQL sem ORM, golang-migrate, UUID, swag, slog, OpenTelemetry, Prometheus, Testify/GoMock/testcontainers |
+| `agents-md/react-ts/AGENTS.md` | React + TypeScript | Vite, React Router, TanStack Query, Zustand, React Hook Form + Zod, Tailwind + shadcn/ui, Vitest/MSW/Playwright |
+
+Para usar, copie o arquivo da stack para a raiz do projeto:
+
+```bash
+cp agents-md/go/AGENTS.md /caminho/do/projeto/AGENTS.md
+```
 
 ## Instalação
 
