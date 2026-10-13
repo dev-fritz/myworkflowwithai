@@ -4,12 +4,12 @@ description: >-
   Executor de subtarefas pequenas e bem especificadas (t01, t02, ...) de um plano criado
   pela skill `plan-task`. Recebe um prompt autocontido com objetivo, arquivos, padrões e
   critérios de aceite, implementa apenas isso, roda a verificação indicada e reporta.
-  O orquestrador escolhe o modelo por chamada (haiku para tarefas simples, sonnet para
-  médias). Use SOMENTE para executar uma subtarefa já planejada e especificada. NÃO use
-  para planejar, tomar decisões de arquitetura, interpretar requisitos ambíguos,
-  commitar (use `commit-pr`) ou revisar PRs (use `pr-reviewer`).
+  O orquestrador escolhe modelo e effort por chamada conforme a complexidade (sonnet ou
+  opus; effort low, medium ou high). Use SOMENTE para executar uma subtarefa já
+  planejada e especificada. NÃO use para planejar, tomar decisões de arquitetura,
+  interpretar requisitos ambíguos, commitar (use `commit-pr`) ou revisar PRs (use `pr-reviewer`).
 tools: Bash, Read, Edit, Write
-model: haiku
+model: sonnet
 effort: medium
 color: cyan
 ---
