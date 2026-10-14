@@ -14,7 +14,7 @@ menores executando o trabalho simples e tudo passando por revisão.
                    │ entrevista → plano (t01, t02, ...) → aprovação
                    ▼                       ▼
             ┌───────────────────────────────────────┐
-            │ execução: task-executor (haiku/sonnet)│
+            │ execução: task-executor (sonnet/opus) │
             │ + agente principal nas complexas      │
             │ + revisão obrigatória do orquestrador │
             └──────────────────┬────────────────────┘
@@ -86,8 +86,8 @@ Transforma uma task em entrega dentro de um projeto existente.
 
 | Complexidade | Exemplos | Executor |
 |--------------|----------|----------|
-| simples | boilerplate, configs, CRUD seguindo padrão, testes seguindo exemplo, docs | `task-executor` + `haiku` |
-| média | lógica localizada e bem especificada | `task-executor` + `sonnet` |
+| simples | boilerplate, configs, CRUD seguindo padrão, testes seguindo exemplo, docs | `task-executor` + `sonnet - low` |
+| média | lógica localizada e bem especificada | `task-executor` + `sonnet - medium` |
 | complexa | arquitetura, design de API, auth/segurança, concorrência, integrações | agente principal |
 
 ## Agentes
